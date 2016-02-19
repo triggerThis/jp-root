@@ -1,4 +1,4 @@
-package org.jp.springboot.service;
+package org.jp.webtesta;
 
 /**
  * Hello world!
