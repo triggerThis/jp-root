@@ -8,9 +8,9 @@
     <version>1.0</version>
   </parent>
   <groupId>ot.jp</groupId>
-  <artifactId>jp-springboot-service</artifactId>
+  <artifactId>jp-webtesta</artifactId>
   <version>1.0</version>
-  <name>jp-springboot-service</name>
+  <name>jp-webtesta</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
