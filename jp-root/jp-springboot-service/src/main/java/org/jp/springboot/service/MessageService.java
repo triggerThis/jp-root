@@ -1,5 +1,4 @@
-
-package org.jp.service;
+package org.jp.springboot.service;
 
 import java.util.Calendar;
 import org.jp.domain.a.*;

@@ -43,7 +43,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import org.jp.domain.a.*;
-import org.jp.service.*;
+import org.jp.springboot.service.*;
 //import org.jp.domain.a.MessageRepository;
 //import org.jp.domain.a.InMemoryMessageRepository;
 //import org.jp.domain.a.Message;
@@ -89,6 +89,14 @@ public class SampleWebUiApplication {
 	public MessageRepository messageRepository() {
 		return new InMemoryMessageRepository();
 	}
+	
+	@Bean
+	public MessageService amessageService(){
+		//org.jp.springboot.service.App
+		//org.jp.springboot.service.MessageService
+			return new MessageService();
+		}
+	
 
 	@Bean
 	public Converter<String, Message> messageConverter() {
@@ -100,10 +108,7 @@ public class SampleWebUiApplication {
 		};
 	}
 	
-	@Bean
-	public MessageService messageService{
-		return new MessageService();
-	}
+	
 	//@Autowired
 	//private MainConfig mainConfig;
 	//@Bean
