@@ -91,5 +91,19 @@ public class MessageController {
 		Iterable<Message> messages = this.messageRepository.findAll();
 		return new ModelAndView("messages/list", "messages", messages);
 	}
+	
+	@RequestMapping("/storev2")
+	public ModelAndView storev2( ) throws Exception {		
+			 
+		ModelAndView mv = new ModelAndView();
+		 mv.setViewName("messages/view2");
+		 System.out.print("storev2");
+		// return mv;
+		return new ModelAndView(
+				"layout2", "customer",null
+				
+				);
+		
+	}
 
 }

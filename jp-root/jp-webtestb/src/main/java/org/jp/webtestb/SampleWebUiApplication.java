@@ -28,6 +28,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
+import org.springframework.boot.autoconfigure.web.ErrorAttributes;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.context.ApplicationContext;
@@ -63,7 +64,7 @@ import org.jp.springboot.service.*;
 //@EnableJpaRepositories({ "com.at.mul.customer.CustomerRepository","com.at.mul.order.OrderRepository"}) 
 //@EnableAutoConfiguration
 @SpringBootApplication
-//@Import({MvcConfig.class}) //
+@Import({MvcConfig.class}) //
 @EnableAspectJAutoProxy //： 激活Aspect自动代理 <aop:aspectj-autoproxy/>
 @EnableAutoConfiguration
 @ComponentScan( basePackages = {"org.jp.webtestb","org.jp.domain.a"})
@@ -108,6 +109,13 @@ public class SampleWebUiApplication {
 		};
 	}
 	
+	 @Autowired
+	 private ErrorAttributes errorAttributes;
+
+	 @Bean
+	 public AppErrorController appErrorController(){
+		 return new AppErrorController(errorAttributes);}
+	
 	
 	//@Autowired
 	//private MainConfig mainConfig;
@@ -141,7 +149,5 @@ public class SampleWebUiApplication {
 	            System.out.println(beanName);
 	        }
 	}
-	
-	
 
 }

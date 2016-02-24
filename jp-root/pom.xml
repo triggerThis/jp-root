@@ -23,6 +23,7 @@
     <module>jp-domain-a</module>
     <module>jp-webtesta</module>
     <module>jp-webtestb</module>
+    <module></module>  <module>jp-springboot-controller</module>
   </modules>
   
    <properties>
