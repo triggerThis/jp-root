@@ -16,7 +16,10 @@
 
 <link rel="stylesheet" th:href="@{/resources/static/js/jquery-easyui-1.4.4/themes/default/easyui.css}" />
 <script th:src="@{/resources/static/js/jquery-easyui-1.4.4/jquery.easyui.min.js}"></script>
- 
+<!-- 
+<link rel="stylesheet" th:href="js/jquery-easyui-1.4.4/themes/default/easyui.css" />
+ -->
+<script src="js/jquery-easyui-1.4.4/jquery.easyui.min.js"></script> 
  <style type="text/css">  
   .content{
   display: flex;
@@ -45,7 +48,7 @@
 </div>
 -->
 <!-- 广东交通集团 -->
-<div style="font-size:24px">广东交通集团 合同管理系统 </div>
+<div style="font-size:24px">广东交通集团 合同管理系统a 3</div>
 
 <!-- 主内容区域 -->
 <div class="content" id="">
@@ -418,6 +421,10 @@
              -->
       </div>
       <div th:replace="products/product:: alert (type='danger', message=${errorMessage})">xxs</div>
+      <div th:replace="products/product-part-a">diva</div>
+      <div th:replace="products/product-part-b">divb</div>
+      
+      end ------------------------
     </div>
     
 
