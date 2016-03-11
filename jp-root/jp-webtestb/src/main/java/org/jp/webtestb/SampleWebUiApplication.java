@@ -67,7 +67,9 @@ import org.jp.springboot.service.*;
 @Import({MvcConfig.class}) //
 @EnableAspectJAutoProxy //： 激活Aspect自动代理 <aop:aspectj-autoproxy/>
 @EnableAutoConfiguration
-@ComponentScan( basePackages = {"org.jp.webtestb","org.jp.domain.a"})
+@ComponentScan( basePackages = {"org.jp.webtestb","org.jp.domain.a",
+		"sample.data.jpa"		
+		})
 
 //可以扫描多个自动装配类
 //@ComponentScan( basePackages = {"org.jp.webtestb", "com.lqspring.rest","sample.web"})
@@ -148,6 +150,8 @@ public class SampleWebUiApplication {
 	        for (String beanName : beanNames) {
 	            System.out.println(beanName);
 	        }
+	        
+	        System.out.println(" beans provided by Spring Boot was listing up");
 	}
 
 }

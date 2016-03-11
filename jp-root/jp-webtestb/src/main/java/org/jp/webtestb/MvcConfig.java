@@ -22,9 +22,10 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 public class MvcConfig extends WebMvcConfigurerAdapter  {  
   
     
-  //  @Override
-  //  public void addResourceHandlers(final ResourceHandlerRegistry registry) {
-  //      registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-   // }
+    @Override
+    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+        registry.addResourceHandler("/**").addResourceLocations("/resources/");
+    }
      
 }

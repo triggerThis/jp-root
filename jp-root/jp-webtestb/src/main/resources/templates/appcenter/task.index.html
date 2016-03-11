@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
->
+<html xmlns:th="http://www.thymeleaf.org">
 <!-- xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">  --> 
   <head>
-    <title>Layout</title>
+    <title>index of application center</title>
 <meta charset="UTF-8"/>
     <link rel="stylesheet"
       th:href="@{/css/bootstrap.min.css}"
@@ -12,8 +11,6 @@
    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
    <script src="http://libs.baidu.com/angular/1.3.9/angular.min.js"></script>
-   
-
 <link rel="stylesheet" th:href="@{/resources/static/js/jquery-easyui-1.4.4/themes/default/easyui.css}" />
 <script th:src="@{/resources/static/js/jquery-easyui-1.4.4/jquery.easyui.min.js}"></script>
 <!-- 
@@ -48,18 +45,38 @@
 </div>
 -->
 <!-- 广东交通集团 -->
-<div style="font-size:24px">广东交通集团 合同管理系统a </div>
+<div style="font-size:24px"> 应用中心-任务列表 </div>
+<!-- 广东交通集团 -->
+<div style="font-size:24px">  </div>
 
 <!-- 主内容区域 -->
 <div class="content" id="">
-<div class="content-l" id="">
-</div>
+<div class="content-l" id=""></div>
 <div class="content-center" id="">
+<table id="test" title="组织Folder Browser" class="easyui-treegrid" style="width:400px;height:300px"
+			
+			
+			url="treegrid_data.json"
+			rownumbers="true"
+			idField="id" treeField="name">
+		<thead>
+			<tr>
+				<th field="name" width="160">Name</th>
+				<th field="size" width="60" align="right">Size</th>
+				<th field="date" width="100">Modified Date</th>
+			</tr>
+		</thead>
+	</table>
 </div> 
 <div class="content-r" id="">
-</div>
+<dd id="summary"
+            th:text="${city.name}">
+         city name
+        </dd>
 </div>
 
+
+</div>
 
   </body>
 </html>

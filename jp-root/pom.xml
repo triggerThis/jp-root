@@ -25,6 +25,7 @@
     <module>jp-webtestb</module>
     
     <module>jp-springboot-controller</module>
+    <module>spring-boot-sample-data-jpa</module>
   </modules>
   
    <properties>

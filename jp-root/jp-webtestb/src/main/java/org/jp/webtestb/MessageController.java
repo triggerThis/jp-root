@@ -87,7 +87,7 @@ public class MessageController {
 		System.out.print("now");
 		//return "foo now";
 		//throw new RuntimeException("Expected exception in controller");
-		
+		// ModelAndViewnew mav = new ModelAndView());
 		Iterable<Message> messages = this.messageRepository.findAll();
 		return new ModelAndView("messages/list", "messages", messages);
 	}
@@ -100,8 +100,46 @@ public class MessageController {
 		 System.out.print("storev2");
 		// return mv;
 		return new ModelAndView(
-				"layout2", "customer",null
-				
+				"layout2", "customer",null				
+				);
+		
+	}
+	
+	@RequestMapping("/storev3")
+	public ModelAndView storev3( ) throws Exception {		
+			 
+		ModelAndView mv = new ModelAndView();
+		 mv.setViewName("messages/view2");
+		 System.out.print("storev3");
+		// return mv;
+		return new ModelAndView(
+				"layout3", "customer",null				
+				);
+		
+	}
+	
+	@RequestMapping("/storev4")
+	public ModelAndView storev4( ) throws Exception {		
+			 
+		//ModelAndView mv = new ModelAndView();
+		// mv.setViewName("messages/view2");
+		 System.out.print("storev4 in layouts");
+		// return mv;
+		return new ModelAndView(
+				"/layouts/layout4", "layout4",null				
+				);
+		
+	}
+	
+	@RequestMapping("/storev5")
+	public ModelAndView storev5( ) throws Exception {		
+			 
+		//ModelAndView mv = new ModelAndView();
+		// mv.setViewName("messages/view2");
+		 System.out.print("storev5");
+		// return mv;
+		return new ModelAndView(
+				"layout5", "layout5",null				
 				);
 		
 	}

@@ -36,6 +36,13 @@
        <artifactId>jp-springboot-service</artifactId>
        <version>${project.version}</version> 
      </dependency>
+     
+     <dependency>
+      <groupId>ot.jp</groupId>
+       <artifactId>spring-boot-sample-data-jpa</artifactId>
+       <version>${project.version}</version> 
+     </dependency>
+     
     
      
      <dependency>
