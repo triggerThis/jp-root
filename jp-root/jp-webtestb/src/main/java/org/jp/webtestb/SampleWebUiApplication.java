@@ -93,12 +93,12 @@ public class SampleWebUiApplication {
 		return new InMemoryMessageRepository();
 	}
 	
-	@Bean
-	public MessageService amessageService(){
-		//org.jp.springboot.service.App
-		//org.jp.springboot.service.MessageService
-			return new MessageService();
-		}
+//	@Bean
+//	public MessageService amessageService(){
+//		//org.jp.springboot.service.App
+//		//org.jp.springboot.service.MessageService
+//			return new MessageService();
+//		}
 	
 
 	@Bean
