@@ -126,7 +126,7 @@ public class MessageController {
 		 System.out.print("storev4 in layouts");
 		// return mv;
 		return new ModelAndView(
-				"/layouts/layout4", "layout4",null				
+				"layouts/layout4", "layout4",null				
 				);
 		
 	}

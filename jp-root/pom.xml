@@ -16,16 +16,16 @@
   <modules>
   	<module>jp-util</module>
   	<module>jp-zeroc-ice</module> 
-  	 <module>jp-webtest</module>
+  	 <module>jp-domain-a</module>  	 
   	 <module>jp-springboot-service</module>
   	 <module>jp-pojo-test</module>
-  	 <module>jp-springboot-service-test</module>
-    <module>jp-domain-a</module>
+  	 <module>jp-springboot-service-test</module>   
     <module>jp-webtesta</module>
-    <module>jp-webtestb</module>
-    
+    <module>jp-webtestb</module>    
     <module>jp-springboot-controller</module>
-    <module>spring-boot-sample-data-jpa</module>
+    <module>spring-boot-sample-data-jpa</module>    
+   <!--    <module>jp-webtest</module>  -->
+   <!-- <module>jp-wartest1</module>   --> 
   </modules>
   
    <properties>

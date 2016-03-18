@@ -186,7 +186,7 @@ public class ApplicationCenterController {
 		
 		//Iterable<City> citys = this.cityService.getCity("Bath", "UK");
 		 City city = this.cityService.getCity("Bath", "UK");
-		return new ModelAndView("/appcenter/task.index", "city", city);//city);
+		return new ModelAndView("appcenter/task.index", "city", city);//city);
 		
 		//
 		//return new ModelAndView(
@@ -202,7 +202,7 @@ public class ApplicationCenterController {
 		 System.out.print("f5");
 		// return mv;
 		return new ModelAndView(
-				"/appcenter/index", "City",null				
+				"appcenter/index", "City",null				
 				);
 		
 	}
