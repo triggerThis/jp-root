@@ -18,16 +18,23 @@ import javax.validation.Valid;
 import org.jp.domain.a.Message;
 import org.jp.domain.a.MessageRepository;
 
+import org.jp.domain.a.User;
+//import org.jp.domain.a.UserRepository;
+import org.jp.springboot.service.UserService;
+
 import sample.data.jpa.domain.City;
 import sample.data.jpa.service.CityService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
@@ -176,6 +183,11 @@ public class ApplicationCenterController {
 	@Autowired
 	private  CityService cityService;
 	
+	@Autowired(required=true)	
+	@Qualifier("userService")
+	//@Bean
+	private	UserService userService;
+	
 	@RequestMapping("/appcenter")
 	public ModelAndView f5( ) throws Exception {		
 			 
@@ -194,8 +206,66 @@ public class ApplicationCenterController {
 		//		);
 	}
 	
-	@RequestMapping("/appcenter/index")
+	@RequestMapping("/appcenter/user")
 	public ModelAndView f6( ) throws Exception {		
+			 
+		//ModelAndView mv = new ModelAndView();
+		// mv.setViewName("messages/view2");
+		 System.out.print("f5");
+		// return mv;
+		
+		//Iterable<City> citys = this.cityService.getCity("Bath", "UK");
+		 String user = this.userService.toJson();
+		return new ModelAndView("appcenter/task.index1", "user", user);//city);
+		
+		//
+		//return new ModelAndView(
+		//		"/appcenter/task.index", "taskModel",null				
+		//		);
+	}
+	
+	@RequestMapping("/appcenter/userJ")
+	@ResponseBody 
+	public User f66( ) throws Exception {
+		
+	   			 
+		//ModelAndView mv = new ModelAndView();
+		// mv.setViewName("messages/view2");
+		 System.out.print("f5");
+		// return mv;
+		
+		//Iterable<City> citys = this.cityService.getCity("Bath", "UK");
+		 User user = this.userService.fromJson("");
+		return user;
+		
+		//
+		//return new ModelAndView(
+		//		"/appcenter/task.index", "taskModel",null				
+		//		);
+	}
+	
+	@RequestMapping("/appcenter/userList")
+	public ModelAndView f7( ) throws Exception {		
+			 
+		//ModelAndView mv = new ModelAndView();
+		// mv.setViewName("messages/view2");
+		 System.out.print("f5");
+		// return mv;
+		
+		//Iterable<City> citys = this.cityService.getCity("Bath", "UK");
+		 String user = this.userService.listToJson();
+		return new ModelAndView("appcenter/task.index1", "user", user);//city);
+		
+		//
+		//return new ModelAndView(
+		//		"/appcenter/task.index", "taskModel",null				
+		//		);
+	}
+	
+	
+	
+	@RequestMapping("/appcenter/index")
+	public ModelAndView f8( ) throws Exception {		
 			 
 		//ModelAndView mv = new ModelAndView();
 		// mv.setViewName("messages/view2");

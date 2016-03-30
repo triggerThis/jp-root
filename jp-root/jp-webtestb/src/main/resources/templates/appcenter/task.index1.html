@@ -56,7 +56,7 @@
 <table id="test" title="组织Folder Browser" class="easyui-treegrid" style="width:400px;height:300px"
 			
 			
-			url="treegrid_data.json"
+			url="data"
 			rownumbers="true"
 			idField="id" treeField="name">
 		<thead>
@@ -67,15 +67,44 @@
 			</tr>
 		</thead>
 	</table>
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+		 $('#test').datagrid({  
+			    url:'static/data/treegrid_data',  
+			    queryParams:{  
+			        id:'001',  
+			        state:'ok'  
+			    }  
+			}); 
+		}); 		 
+	 
+	 
+	</script>
 </div> 
 <div class="content-r" id="">
-	<dd id="summary"   th:text="${city.name}">
-         city name
+
+	
+        
+  <!--    <dd id="user"   th:text="${#calendars.format(user.birthDay.toString(),'dd MMMM yyyy')}"> 
+     </dd>
+      
+     
+   <dd id="user1"   th:text="${#calendars.format(user.birthDay, 'dd/MMM/yyyy HH:mm')}">
+   </dd>
+   
+   <dd id="user1"   th:text="${user.birthDay.toString()}">
+   </dd>
+  
+    	<dd id="user"   th:text="${#numbers.formatDecimal(user.age,1,2)}">
+         user name
         </dd>
         
         <dd id="user"   th:text="${user.name}">
          user name
         </dd>
+         -->
+         <dd th:text="${user}"></dd>
 </div>
 
 

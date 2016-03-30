@@ -26,6 +26,12 @@ public class MvcConfig extends WebMvcConfigurerAdapter  {
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
         registry.addResourceHandler("/**").addResourceLocations("/resources/");
+        registry.addResourceHandler("/**").addResourceLocations("/resources/static/data");
     }
+    
+    @Override  
+    public void addViewControllers(ViewControllerRegistry registry){  
+        registry.addViewController("/data").setViewName("treegrid_data.json");  
+    } 
      
 }

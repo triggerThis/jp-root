@@ -68,7 +68,7 @@ import org.jp.springboot.service.*;
 @EnableAspectJAutoProxy //： 激活Aspect自动代理 <aop:aspectj-autoproxy/>
 @EnableAutoConfiguration
 @ComponentScan( basePackages = {"org.jp.webtestb","org.jp.domain.a",
-		"sample.data.jpa"		
+		"sample.data.jpa, org.jp.springboot.service"		
 		})
 
 //可以扫描多个自动装配类
